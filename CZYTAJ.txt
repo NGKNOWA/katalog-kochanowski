@@ -1,0 +1,29 @@
+FLIPBOOK – Kochanowski™ – od portretu do marki. Katalog
+=======================================================
+
+1. Wgraj cały folder (np. jako /flipbook/) na serwer, bez zmiany struktury:
+   index.html, md/, hd/, thumbs/, lib/, search.json
+
+2. Osadź na stronie (wklej w bloku HTML, np. w WordPressie „Własny HTML”):
+
+<iframe src="https://TWOJA-DOMENA.pl/flipbook/index.html"
+        title="Kochanowski™ – od portretu do marki. Katalog"
+        style="width:100%;aspect-ratio:16/10;max-height:90vh;border:0"
+        allow="fullscreen; clipboard-write" allowfullscreen loading="lazy"></iframe>
+
+   Otwarcie na konkretnej stronie: dopisz do adresu np. #strona-48
+   (numer drukowany w katalogu).
+
+3. Ustawienia (w index.html, blok CONFIG na początku skryptu):
+   pdfUrl    – link do PDF; gdy wpiszesz adres, pojawi się przycisk pobierania
+   shareUrl  – adres strony, na której wisi flipbook (do przycisku „Udostępnij”)
+   flipSeconds – tempo autoodtwarzania
+
+Uwagi
+- Flipbook nie działa po otwarciu pliku index.html z dysku (dwuklikiem) –
+  potrzebny jest serwer (wyszukiwarka wczytuje search.json).
+- Wszystko jest lokalne: biblioteka, fonty i obrazy. Nie ma zapytań do
+  Google Fonts ani do zewnętrznych CDN.
+- md/  – strony do zwykłego czytania (1000 px), hd/ – strony do powiększenia (1630 px).
+- Biblioteka page-flip (StPageFlip) – licencja MIT, fonty Bodoni Moda i Crimson Pro – licencja SIL OFL;
+  pliki licencji w folderze lib/.
